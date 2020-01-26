@@ -4,8 +4,7 @@ import pandas as pd
 import math
 import scipy.stats as ss
 def main():
-    dataset = pd.read_csv(sys.argv[1]).values             
-#    decision_matrix = dataset[:,1:]                        
+    dataset = pd.read_csv(sys.argv[1]).values                                    
     weights = [int(i) for i in sys.argv[2].split(',')]   
     impacts = sys.argv[3].split(',')                      
     topsis(dataset , weights , impacts)
