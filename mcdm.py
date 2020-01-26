@@ -64,7 +64,8 @@ def topsis(dataset,weight,impact):
     
         
     rank = ss.rankdata(p)
-    output["performance score"] = p
+    rank = len(rank) - rank + 1
+    output["performance score"] = pz
     output["rank"] = rank
     
     return output
