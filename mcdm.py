@@ -45,7 +45,7 @@ def topsis(dataset,weight,impact):
             vPlus.append(minValue[i])
             vMinus.append(maxValue[i])
     
-    dataset = dataset.as_matrix()    
+    dataset = dataset.to_numpy()    
     p = []
     sPlus = []
     sMinus = []
@@ -65,7 +65,7 @@ def topsis(dataset,weight,impact):
         
     rank = ss.rankdata(p)
     rank = len(rank) - rank + 1
-    output["performance score"] = pz
+    output["performance score"] = p
     output["rank"] = rank
     
     return output
